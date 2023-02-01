@@ -25,8 +25,15 @@ public class CarsController {
 		//messages.add("5.2.0 version by sep'19 ");
 		model.addAttribute("messages", messages);
 
-		model.addAttribute(attrName, carService.getCarsByCount(count));
+		model.addAttribute(attrName, carService.getCarsByCount(checkCountParameter(count)));
 		return "cars";
+	}
+
+	private Integer checkCountParameter(Integer count) {
+		if((count == null) || (count < 0)) {
+			return Integer.MAX_VALUE;
+		}
+		return count;
 	}
 	
 }
