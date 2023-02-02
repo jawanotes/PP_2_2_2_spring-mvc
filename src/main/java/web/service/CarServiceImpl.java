@@ -42,6 +42,7 @@ public class CarServiceImpl implements CarService {
         }
 
         return carsList;*/
-        return carsList.subList(0, Math.min(count, 5));
+        //return carsList.subList(0, Math.min(count, 5));
+        return carsList.subList(0, count);
     }
 }

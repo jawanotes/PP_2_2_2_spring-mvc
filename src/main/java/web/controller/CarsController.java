@@ -31,9 +31,11 @@ public class CarsController {
 
 	private Integer checkCountParameter(Integer count) {
 		if((count == null) || (count < 0)) {
-			return Integer.MAX_VALUE;
+			//return Integer.MAX_VALUE;
+			count = Integer.MAX_VALUE;
 		}
-		return count;
+		//return count;
+		return Math.min(count, 5);
 	}
 	
 }
