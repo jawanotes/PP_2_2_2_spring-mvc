@@ -1,8 +1,10 @@
 package web.model;
 
-import org.springframework.stereotype.Component;
+//import org.springframework.context.annotation.Scope;
+//import org.springframework.stereotype.Component;
 
-@Component
+//@Component
+//@Scope(value = "Prototype")
 public class Car {
     String name;
     String color;
